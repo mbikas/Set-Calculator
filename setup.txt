@@ -1,0 +1,58 @@
+Name of the Application: SetCalculator 
+Language: C++
+Development IDE: Xcode5.1.1
+Development Environment: MacOSX
+
+How to Run the SetCalculator
+----------------------------
+Using g++ compiler in Windows from the terminal:
+1. Install and configure cygwin (if required):
+	a. Download and install cygwin from: https://www.cygwin.com/
+	b. Configure the bin path (C:/cygwin64/bin) as system environment variable
+	c. Test with giving command from terminal: g++ -v 
+2. Open a terminal and go to the directory of the cpp file (/SetManager)
+3. Give the following command to compile:
+	g++ -o SetCalculator *.cpp
+4. Give the following command to run the application:
+	SetCalculator    or  ./SetCalculator( for unix) 
+5. It will show list of available command in the console window
+
+Using Xcode:
+1. Install Xcode (if required)
+2. Double click or open the project file SetCalculator.xcodeproj from the directory SetCalculator/Calculator.xcodeproj
+3. Product -> Run to run the main file
+4. It will show list of available command in the console window
+
+Available Commands to Operate the SetCalculator 
+————————————————————————
+Press l : To initialize Set A and B as LinkedList
+Press 0 : To initialize Set A and B as OrderedCollection
+Press e : To Erase all the elements from Set A
+Press s : To Switch between Set A and B
+Press c : For copying elements from Set A to Set B
+Press d : For Displaying Set A and B
+Press a : For Adding element to A
+Press u : For Union. A = A union B 
+Press i : For Intersection. A = A intersection B
+Press q : Quit Set Manager
+
+
+Implementation Details
+———————————
+1. The SetCalculator implementation contains following classes:
+a. Set: Abstract base class for Set for two of its subclass SetAsList and SetAsOC
+b. SetAsList: Concrete Derived Class of Set. This class implements all the operations of  Set using LinkedList. 
+	b.1. This class uses another helper class Node. 
+d. SetAsOC: Concrete Derived Class of Set. This class implements all the operations of Set using Ordered Collection.
+e. SetManager: for managing the two sets A and B
+f. main: Main class of the project. To give commands from console to operate the two set.
+
+2. Some of important features implemented:
+a. copy constructor
+b. virtual destructor
+c. virtual copy function
+d. assignment operator overloading 
+e. index operator([]) overloading
+f. Common features of the set like: add, remove, removeAll, swap, size, print, union, intersection 
+
+
